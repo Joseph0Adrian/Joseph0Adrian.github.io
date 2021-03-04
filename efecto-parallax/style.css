@@ -63,7 +63,7 @@ body{
 .section1__h2{
 	background: #000;
 	color: #fff;
-	width: 300px;
+	width: 100px;
 	height: 100px;
 	margin: auto;
 	text-align: center;
@@ -73,7 +73,7 @@ body{
 .section3__h2{
 	background: #000;
 	color: #fff;
-	width: 400px;
+	width: 100px;
 	height: 100px;
 	margin: auto;
 	text-align: center;
@@ -83,7 +83,7 @@ body{
 .section5__h2{
 	background: #000;
 	color: #fff;
-	width: 500px;
+	width: 200px;
 	height: 100px;
 	margin: auto;
 	text-align: center;
@@ -131,16 +131,6 @@ body{
 
 	body{
 		font-size: 12px;
-	}
-
-	.section3__h2{
-	width: auto;
-	height: auto;
-	}
-
-	.section5__h2{
-	width: auto;
-	height: auto;
 	}
 
 }
