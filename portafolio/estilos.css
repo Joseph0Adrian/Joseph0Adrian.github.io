@@ -5,7 +5,7 @@
 
 body{
 	padding: 20px;
-  	font-family: sans-serif;
+ 	font-family: sans-serif;
 	background: #000000;
 	color: #FFFFFF;
 }
@@ -24,10 +24,10 @@ img {
 	grid-template-columns: repeat(3, auto);
 	grid-template-rows: repeat(5, auto);
 	grid-template-areas:"header			header			header"
-						"orange-star	orange-star		orange-star"
-						"smokejumpers	smokejumpers	smokejumpers"
-						"parallax		parallax		parallax"
-						"footer			footer			footer";
+          					  "orange-star	orange-star		orange-star"
+					            "smokejumpers	smokejumpers	smokejumpers"
+						          "parallax		parallax		parallax"
+						          "footer			footer			footer";
 }
 
 .container .header{
