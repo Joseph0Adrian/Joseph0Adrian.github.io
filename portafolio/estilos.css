@@ -22,12 +22,13 @@ img {
 	display: grid;
 	grid-gap: 20px;
 	grid-template-columns: repeat(3, auto);
-	grid-template-rows: repeat(5, auto);
-	grid-template-areas:"header			header			header"
+	grid-template-rows: repeat(6, auto);
+	grid-template-areas:"header			  header			  header"
           					  "orange-star	orange-star		orange-star"
 					            "smokejumpers	smokejumpers	smokejumpers"
-						          "parallax		parallax		parallax"
-						          "footer			footer			footer";
+						          "parallax		  parallax		  parallax"
+                      "clon-netflix clon-netflix  clon-netflix"
+						          "footer			  footer			  footer";
 }
 
 .container .header{
@@ -45,6 +46,10 @@ img {
 
 .container .parallax{
 	grid-area: parallax;
+}
+
+.container .clon-netflix{
+	grid-area: clon-netflix;
 }
 
 .container .footer{

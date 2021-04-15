@@ -52,7 +52,7 @@ peliculas.forEach((pelicula) => {
         setTimeout(() => {
             peliculas.forEach(pelicula => pelicula.classList.remove('hover'));
             elemento.classList.add('hover');
-        }, 300);
+        }, 1000);
     });
 });
 
