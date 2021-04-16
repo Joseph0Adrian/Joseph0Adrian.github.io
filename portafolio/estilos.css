@@ -100,6 +100,21 @@ img {
   filter: blur(2px);
 }
 
+@media screen and (max-width: 768px){
+	.container{
+    grid-template-areas:  "header			  header"
+          					      "orange-star	orange-star"
+                          "orange-star	orange-star"
+					                "smokejumpers	smokejumpers"
+                          "smokejumpers	smokejumpers"
+						              "parallax		  parallax"
+                          "parallax		  parallax"
+                          "clon-netflix clon-netflix"
+                          "clon-netflix clon-netflix"
+						              "footer			  footer";
+	}
+}
+
 /*
 @media (hover: none) { 
   .location-title {
