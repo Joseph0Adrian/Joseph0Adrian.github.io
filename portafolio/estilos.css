@@ -102,16 +102,16 @@ img {
 
 @media screen and (max-width: 768px){
 	.container{
-    grid-template-areas:  "header			  header"
-          					      "orange-star	orange-star"
-                          "orange-star	orange-star"
-					                "smokejumpers	smokejumpers"
-                          "smokejumpers	smokejumpers"
-						              "parallax		  parallax"
-                          "parallax		  parallax"
-                          "clon-netflix clon-netflix"
-                          "clon-netflix clon-netflix"
-						              "footer			  footer";
+    grid-template-areas:  "header			  header        header"
+          					      "orange-star	orange-star   orange-star"
+                          "orange-star	orange-star   orange-star"
+					                "smokejumpers	smokejumpers  smokejumpers"
+                          "smokejumpers	smokejumpers  smokejumpers"
+						              "parallax		  parallax      parallax"
+                          "parallax		  parallax      parallax"
+                          "clon-netflix clon-netflix  clon-netflix"
+                          "clon-netflix clon-netflix  clon-netflix"
+						              "footer			  footer        footer";
 	}
 }
 
