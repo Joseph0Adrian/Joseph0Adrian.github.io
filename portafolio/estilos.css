@@ -1,4 +1,188 @@
-* {
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #141414;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.contenedor{
+  width: 90%;
+  margin: auto;
+}
+
+header{
+  padding: 30px 0;
+}
+
+header .contenedor{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.estilo-titulo{
+  font-family: 'Bebas Neue', cursive;
+  font-weight: normal;
+  color: #fff;
+  font-size: 40px;
+}
+
+.orange-star{
+  font-size: 16px;
+  min-height: 40.62em;
+  color: #fff;
+  background: url(https://live.staticflickr.com/65535/51029754563_235a0c1102_h.jpg);
+  background-position: center center;
+  background-size: cover;
+  margin-bottom: 3.12em;
+  display: flex;
+  align-items: end;
+}
+
+.orange-star .contenedor{
+  margin: 0 auto;
+  margin-bottom: 6.25em;
+}
+
+.orange-star .boton{
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 0.31em;
+  padding: 0.93em 1.87em;
+  color: #fff;
+  margin-right: 1.25em;
+  cursor: pointer;
+  transition: .3s ease all;
+  font-size: 1.12em;
+}
+
+.orange-star .boton:hover{
+  background: #fff;
+  color: #000;
+}
+
+.orange-star .boton i{
+  margin-right: 1.25em;
+}
+
+.smokejumpers{
+  font-size: 16px;
+  min-height: 40.62em;
+  color: #fff;
+  background: url(https://live.staticflickr.com/65535/51030584282_cc6d20ca80_h.jpg);
+  background-position: center center;
+  background-size: cover;
+  margin-bottom: 3.12em;
+  display: flex;
+  align-items: end;
+}
+
+.smokejumpers .contenedor{
+  margin: 0 auto;
+  margin-bottom: 6.25em;
+}
+
+.smokejumpers .boton{
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 0.31em;
+  padding: 0.93em 1.87em;
+  color: #fff;
+  margin-right: 1.25em;
+  cursor: pointer;
+  transition: .3s ease all;
+  font-size: 1.12em;
+}
+
+.smokejumpers .boton:hover{
+  background: #fff;
+  color: #000;
+}
+
+.smokejumpers .boton i{
+  margin-right: 1.25em;
+}
+
+.parallax{
+  font-size: 16px;
+  min-height: 40.62em;
+  color: #fff;
+  background: url(https://live.staticflickr.com/65535/51030482751_0818aa0a18_h.jpg);
+  background-position: center center;
+  background-size: cover;
+  margin-bottom: 3.12em;
+  display: flex;
+  align-items: end;
+}
+
+.parallax .contenedor{
+  margin: 0 auto;
+  margin-bottom: 6.25em;
+}
+
+.parallax .boton{
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 0.31em;
+  padding: 0.93em 1.87em;
+  color: #fff;
+  margin-right: 1.25em;
+  cursor: pointer;
+  transition: .3s ease all;
+  font-size: 1.12em;
+}
+
+.parallax .boton:hover{
+  background: #fff;
+  color: #000;
+}
+
+.parallax .boton i{
+  margin-right: 1.25em;
+}
+
+.clon-netflix{
+  font-size: 16px;
+  min-height: 40.62em;
+  color: #fff;
+  background: url(https://live.staticflickr.com/65535/51118142238_4ff0059199_h.jpg);
+  background-position: center center;
+  background-size: cover;
+  margin-bottom: 3.12em;
+  display: flex;
+  align-items: end;
+}
+
+.clon-netflix .contenedor{
+  margin: 0 auto;
+  margin-bottom: 6.25em;
+}
+
+.clon-netflix .boton{
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 0.31em;
+  padding: 0.93em 1.87em;
+  color: #fff;
+  margin-right: 1.25em;
+  cursor: pointer;
+  transition: .3s ease all;
+  font-size: 1.12em;
+}
+
+.clon-netflix .boton:hover{
+  background: #fff;
+  color: #000;
+}
+
+.clon-netflix .boton i{
+  margin-right: 1.25em;
+}
+/* * {
 	margin: 0;
 	padding: 0;
 }
@@ -86,7 +270,6 @@ img {
   background: rgba(90,0,10,0.4);
   color: white;
   
-  /* position the text in t’ middle*/
   display: flex;
   align-items: center;
   justify-content: center;
@@ -113,7 +296,7 @@ img {
                           "clon-netflix clon-netflix  clon-netflix"
 						              "footer			  footer        footer";
 	}
-}
+} */
 
 /*
 @media (hover: none) { 
