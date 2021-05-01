@@ -1,0 +1,177 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background: black;
+	color: white;
+	font-family: sans-serif;
+}
+
+b{
+	color: black;
+	width: 150px;
+	height: 150px;
+	margin: 20px;
+	border: 10px solid red;
+	background: yellow;
+	height: 300px;
+	width: 300px;
+	display: inline-block;
+}
+
+/*div{
+	margin: auto;
+	margin-top: 50px;
+	width: 320px;
+	height: 350px;
+	border: 4px solid red;
+	background: grey;
+	overflow: auto;
+	overflow: scroll;
+}*/
+
+.contenedor{
+	float: left;
+}
+
+.contenedor div{
+	width: 50%;
+	float: right;
+}
+
+.primario{
+	background: red;
+	color: black;
+}
+
+.secundario{
+	background: yellow;
+	color: black;
+}
+
+.texto-1{
+	padding: 20px;
+}
+
+.texto-1::first-line{
+	color: blue;
+	font-size: 2em;
+}
+
+.texto-2{
+	padding: 20px;
+}
+
+.texto-2::first-letter{
+	color: blue;
+	font-size: 10em;
+}
+
+form{
+	margin: 100px auto;
+	display: block;
+	background-color: #555;
+	padding: 100px;
+	width: 50%;
+}
+
+input{
+	padding: 6px;
+	width: 100%;
+}
+
+input::placeholder{
+	color: red;
+	font-size: 1.4em
+}
+
+b{
+	padding: 6px;
+	width: 100%;
+}
+
+b::before{
+	content: "me suscribi";
+}
+
+b::after{
+	content: "todos tendencias";
+}
+
+.caja1{
+	height: 200px;
+	width: 200px;
+	background: slateblue;
+	transition: background 1s, height 1s, width 1s, border .5s;
+	border: 3px solid red;
+}
+
+.caja1:hover{
+	background: darkslateblue;
+	height: 300px;
+	width: 300px;
+	border-color: blue;
+}
+
+.caja2{
+	padding: 20px;
+	background-color: darkslateblue;
+	color: black;
+}
+
+.caja2:hover{
+	padding: 20px;
+	background-color: slateblue;
+	color: white;
+}
+
+.caja3 {
+	margin: 30px;
+	padding: 20px;
+	display: block;
+}
+
+.caja3:link{
+	color: red;
+}
+
+.caja4{
+	width: 300px;
+	height: 300px;
+	background: red;
+	margin: 25px;
+	transition: all 1s;
+}
+
+.caja4:active{
+	background: blue;
+	width: 600px;
+}
+
+.caja5{
+	margin: 25px;
+	width: 154px;
+	height: 193px;
+}
+
+.caja5 img{
+	border: 2px solid red;
+	object-fit: contain;
+	/*object-fit: cover;*/
+	/*object-fit: none;*/
+}
+
+.caja6{
+	margin: 45px;
+	width: 200px;
+	height: 300px;
+	border: 5px solid red;
+	background-color: pink;
+	cursor: pointer;
+}
+
+.caja6:active{
+	cursor: row-resize;
+}

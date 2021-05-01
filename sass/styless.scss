@@ -1,0 +1,59 @@
+// $colorbg: salmon;
+// $widthH1: 200px;
+// $w2: $widthH1 + 20px;
+
+// body{
+//     background: $colorbg;
+// }
+
+// h1{
+//     color: $colorbg;
+//     background-color: white;
+//     padding: 15px;
+//     width: $widthH1;
+// }
+
+// p{
+//     width: $w2;
+// }
+@import "menu";
+
+@mixin fontstyle($color, $fontSize){
+    font-size: $fontSize;
+    color: white;
+    background-color: $color;
+    text-transform: uppercase;
+}
+
+body{
+    background-color: darkgray;
+}
+
+h1{
+    font-size: 40px;
+    @include fontstyle(red, 40px);
+}
+
+p{
+    font-size: 20px;
+    @include fontstyle(blue, 18px);
+}
+
+.container{
+    width: 100%;
+    margin: 0 auto;
+}
+
+section{
+    float: left;
+    width: 200px / 600px * 100%;
+    height: 400px;
+    background-color: darkkhaki;
+}
+
+aside{
+    float: left;
+    width: 200px / 600px * 100%;
+    height: 400px;
+    background-color: darkturquoise;
+}

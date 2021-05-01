@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Eventos</title>
+    </head>
+    <body>
+        <button id="boton">Boton</button>
+        <input type="text" id="input">
+        <script>
+            (function(){
+                var saludo=function(e){
+                    // alert('Saludo');
+                    console.log('Este evento es de tipo: ' + e.type);
+                    console.log('El target es tipo: ' + e.target);
+                };
+
+                // var saludo2=function(){
+                //     alert('Saludo2');
+                // };
+
+                var boton=document.getElementById('boton');
+                boton.addEventListener("click", saludo);
+                // boton.addEventListener("click", saludo2);
+
+                // boton.removeEventListener("click", saludo);
+
+            }())
+        </script>
+    </body>
+</html>

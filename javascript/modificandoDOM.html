@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Document Object Model</title>
+    </head>
+    <body>
+        <ol id="lista">
+            <li>Lorem ipsum, dolor sit amet.</li>
+            <li>Asperiores ad, quam unde. Fuga.</li>
+        </ol>
+        <script>
+            var elemento = document.createElement("li"),
+            contenido = document.createTextNode("Nuevo Texto");
+
+            elemento.appendChild(contenido);
+
+            //var padre = document.getElementById("lista"),
+            var padre = document.getElementsByTagName("li")[0].parentNode,
+                primerElemento = document.getElementsByTagName("li")[0];
+
+            padre.insertBefore(elemento, primerElemento);
+            //padre.appendChild(elemento);
+            
+        </script>
+    </body>
+</html>
