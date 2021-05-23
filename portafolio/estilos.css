@@ -182,128 +182,41 @@ header .contenedor{
 .clon-netflix .boton i{
   margin-right: 1.25em;
 }
-/* * {
-	margin: 0;
-	padding: 0;
-}
 
-body{
-	padding: 20px;
- 	font-family: sans-serif;
-	background: #000000;
-	color: #FFFFFF;
-}
-
-img {
-  width: 100%;
-  height: auto;
-}
-
-.container{
-	width: 90%;
-	max-width: 1000px;
-	margin: 20px auto;
-	display: grid;
-	grid-gap: 20px;
-	grid-template-columns: repeat(3, auto);
-	grid-template-rows: repeat(6, auto);
-	grid-template-areas:"header			  header			  header"
-          					  "orange-star	orange-star		orange-star"
-					            "smokejumpers	smokejumpers	smokejumpers"
-						          "parallax		  parallax		  parallax"
-                      "clon-netflix clon-netflix  clon-netflix"
-						          "footer			  footer			  footer";
-}
-
-.container .header{
-	text-align: center;
-	grid-area: header;
-}
-
-.container .orange-star{
-	grid-area: orange-star;
-}
-
-.container .smokejumpers{
-	grid-area: smokejumpers;
-}
-
-.container .parallax{
-	grid-area: parallax;
-}
-
-.container .clon-netflix{
-	grid-area: clon-netflix;
-}
-
-.container .footer{
-	grid-area: footer;
-}
-
-.location-listing{
-	position: relative;
-}
-
-.location-image{
-	line-height: 0;
- 	overflow: hidden;
-}
-
-.location-image img{
-  filter: blur(0px);
-  transition: filter 0.3s ease-in;
-  transform: scale(1.1);
-}
-
-.location-title{
-  font-size: 1.5em;
-  font-weight: bold;
-  text-decoration: none;
-  z-index: 1;
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  transition: opacity .5s;
-  background: rgba(90,0,10,0.4);
-  color: white;
-  
+.vue-app{
+  font-size: 16px;
+  min-height: 40.62em;
+  color: #fff;
+  background: url(https://live.staticflickr.com/65535/51195599517_6749fbf44f_h.jpg);
+  background-position: center center;
+  background-size: cover;
+  margin-bottom: 3.12em;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: end;
 }
 
-.location-listing:hover .location-title{
-  opacity: 1;
+.vue-app .contenedor{
+  margin: 0 auto;
+  margin-bottom: 6.25em;
 }
 
-.location-listing:hover .location-image img{
-  filter: blur(2px);
+.vue-app .boton{
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 0.31em;
+  padding: 0.93em 1.87em;
+  color: #fff;
+  margin-right: 1.25em;
+  cursor: pointer;
+  transition: .3s ease all;
+  font-size: 1.12em;
 }
 
-@media screen and (max-width: 768px){
-	.container{
-    grid-template-areas:  "header			  header        header"
-          					      "orange-star	orange-star   orange-star"
-                          "orange-star	orange-star   orange-star"
-					                "smokejumpers	smokejumpers  smokejumpers"
-                          "smokejumpers	smokejumpers  smokejumpers"
-						              "parallax		  parallax      parallax"
-                          "parallax		  parallax      parallax"
-                          "clon-netflix clon-netflix  clon-netflix"
-                          "clon-netflix clon-netflix  clon-netflix"
-						              "footer			  footer        footer";
-	}
-} */
+.vue-app .boton:hover{
+  background: #fff;
+  color: #000;
+}
 
-/*
-@media (hover: none) { 
-  .location-title {
-    opacity: 1;
-  }
-  .location-image img {
-    filter: blur(2px);
-  }
-}*/
+.vue-app .boton i{
+  margin-right: 1.25em;
+}
