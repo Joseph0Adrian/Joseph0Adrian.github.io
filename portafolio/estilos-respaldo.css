@@ -1,39 +1,37 @@
-* {
+*{
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-body {
+body{
   background-color: #141414;
   font-family: 'Open Sans', sans-serif;
 }
 
-header {
+.contenedor{
+  width: 90%;
+  margin: auto;
+}
+
+header{
   padding: 30px 0;
 }
 
-header .contenedor {
-  display: -webkit-box;
-  display: -ms-flexbox;
+header .contenedor{
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.estilo-titulo {
+.estilo-titulo{
   font-family: 'Bebas Neue', cursive;
   font-weight: normal;
   color: #fff;
   font-size: 40px;
 }
 
-.orange-star {
+.orange-star{
   font-size: 16px;
   min-height: 40.62em;
   color: #fff;
@@ -41,20 +39,16 @@ header .contenedor {
   background-position: center center;
   background-size: cover;
   margin-bottom: 3.12em;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: end;
+  align-items: end;
 }
 
-.orange-star .contenedor {
+.orange-star .contenedor{
   margin: 0 auto;
   margin-bottom: 6.25em;
 }
 
-.orange-star .boton {
+.orange-star .boton{
   background: rgba(0, 0, 0, 0.5);
   border: none;
   border-radius: 0.31em;
@@ -62,21 +56,20 @@ header .contenedor {
   color: #fff;
   margin-right: 1.25em;
   cursor: pointer;
-  -webkit-transition: .3s ease all;
   transition: .3s ease all;
   font-size: 1.12em;
 }
 
-.orange-star .boton:hover {
+.orange-star .boton:hover{
   background: #fff;
   color: #000;
 }
 
-.orange-star .boton i {
+.orange-star .boton i{
   margin-right: 1.25em;
 }
 
-.smokejumpers {
+.smokejumpers{
   font-size: 16px;
   min-height: 40.62em;
   color: #fff;
@@ -84,20 +77,16 @@ header .contenedor {
   background-position: center center;
   background-size: cover;
   margin-bottom: 3.12em;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: end;
+  align-items: end;
 }
 
-.smokejumpers .contenedor {
+.smokejumpers .contenedor{
   margin: 0 auto;
   margin-bottom: 6.25em;
 }
 
-.smokejumpers .boton {
+.smokejumpers .boton{
   background: rgba(0, 0, 0, 0.5);
   border: none;
   border-radius: 0.31em;
@@ -105,21 +94,20 @@ header .contenedor {
   color: #fff;
   margin-right: 1.25em;
   cursor: pointer;
-  -webkit-transition: .3s ease all;
   transition: .3s ease all;
   font-size: 1.12em;
 }
 
-.smokejumpers .boton:hover {
+.smokejumpers .boton:hover{
   background: #fff;
   color: #000;
 }
 
-.smokejumpers .boton i {
+.smokejumpers .boton i{
   margin-right: 1.25em;
 }
 
-.parallax {
+.parallax{
   font-size: 16px;
   min-height: 40.62em;
   color: #fff;
@@ -127,20 +115,16 @@ header .contenedor {
   background-position: center center;
   background-size: cover;
   margin-bottom: 3.12em;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: end;
+  align-items: end;
 }
 
-.parallax .contenedor {
+.parallax .contenedor{
   margin: 0 auto;
   margin-bottom: 6.25em;
 }
 
-.parallax .boton {
+.parallax .boton{
   background: rgba(0, 0, 0, 0.5);
   border: none;
   border-radius: 0.31em;
@@ -148,21 +132,20 @@ header .contenedor {
   color: #fff;
   margin-right: 1.25em;
   cursor: pointer;
-  -webkit-transition: .3s ease all;
   transition: .3s ease all;
   font-size: 1.12em;
 }
 
-.parallax .boton:hover {
+.parallax .boton:hover{
   background: #fff;
   color: #000;
 }
 
-.parallax .boton i {
+.parallax .boton i{
   margin-right: 1.25em;
 }
 
-.clon-netflix {
+.clon-netflix{
   font-size: 16px;
   min-height: 40.62em;
   color: #fff;
@@ -170,20 +153,16 @@ header .contenedor {
   background-position: center center;
   background-size: cover;
   margin-bottom: 3.12em;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: end;
+  align-items: end;
 }
 
-.clon-netflix .contenedor {
+.clon-netflix .contenedor{
   margin: 0 auto;
   margin-bottom: 6.25em;
 }
 
-.clon-netflix .boton {
+.clon-netflix .boton{
   background: rgba(0, 0, 0, 0.5);
   border: none;
   border-radius: 0.31em;
@@ -191,21 +170,20 @@ header .contenedor {
   color: #fff;
   margin-right: 1.25em;
   cursor: pointer;
-  -webkit-transition: .3s ease all;
   transition: .3s ease all;
   font-size: 1.12em;
 }
 
-.clon-netflix .boton:hover {
+.clon-netflix .boton:hover{
   background: #fff;
   color: #000;
 }
 
-.clon-netflix .boton i {
+.clon-netflix .boton i{
   margin-right: 1.25em;
 }
 
-.vue-app {
+.vue-app{
   font-size: 16px;
   min-height: 40.62em;
   color: #fff;
@@ -213,20 +191,16 @@ header .contenedor {
   background-position: center center;
   background-size: cover;
   margin-bottom: 3.12em;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: end;
+  align-items: end;
 }
 
-.vue-app .contenedor {
+.vue-app .contenedor{
   margin: 0 auto;
   margin-bottom: 6.25em;
 }
 
-.vue-app .boton {
+.vue-app .boton{
   background: rgba(0, 0, 0, 0.5);
   border: none;
   border-radius: 0.31em;
@@ -234,17 +208,15 @@ header .contenedor {
   color: #fff;
   margin-right: 1.25em;
   cursor: pointer;
-  -webkit-transition: .3s ease all;
   transition: .3s ease all;
   font-size: 1.12em;
 }
 
-.vue-app .boton:hover {
+.vue-app .boton:hover{
   background: #fff;
   color: #000;
 }
 
-.vue-app .boton i {
+.vue-app .boton i{
   margin-right: 1.25em;
 }
-/*# sourceMappingURL=estilos.css.map */
