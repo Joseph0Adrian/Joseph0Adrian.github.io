@@ -27,6 +27,6 @@ vueApp.addEventListener('click', () => {
 new fullpage('#fullpage', {
     navigation: true,
     responsiveWidth: 700,
-    anchors: ['orange-star', 'smokejumpers', 'parallax', 'netflix', 'vue'],
+    anchors: ['home', 'orange-star', 'smokejumpers', 'parallax', 'netflix', 'vue'],
     parallax: true
 });

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <title>Scrollreveal</title>
+</head>
+<body>
+    <h1 class="headline"> Widget Inc. </h1>
+    <script>
+        // ScrollReveal().reveal('.headline');
+        ScrollReveal().reveal('.headline', {
+            delay: 0,
+            distance: '0px',
+            duration: 600,
+            easing: 'cubic-bezier(0.5, 0, 0, 1)',
+            interval: 0,
+            opacity: 0,
+            origin: 'bottom',
+            rotate: {
+                x: 100,
+                y: 10,
+                z: 0,
+            }
+        });
+    </script>
+    <!-- <script type="text/javascript" src="/js/main.js"></script> -->
+</body>
+</html>
