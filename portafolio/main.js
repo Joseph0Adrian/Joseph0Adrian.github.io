@@ -23,10 +23,3 @@ clonNetflixUrl.addEventListener('click', () => {
 vueApp.addEventListener('click', () => {
     window.location.href='https://joseph0adrian.github.io/framework-vue/tutorial-vue2/dist/';
 });
-
-new fullpage('#fullpage', {
-    navigation: true,
-    responsiveWidth: 700,
-    anchors: ['orange-star', 'smokejumpers', 'parallax', 'netflix', 'vue'],
-    parallax: true
-});
