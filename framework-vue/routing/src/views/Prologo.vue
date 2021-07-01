@@ -1,24 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link rel="stylesheet" type="text/css" href="estilo-index.css">
-	<title>Smokejumpers</title>
-</head>
-<body>
-	<div class="contenedor">
-		<header class="header">
-			<nav class="header__nav">
-				<ul>
-					<li><a href="index.html">Prólogo</a></li>
-					<li><a href="I.html">I</a></li>
-					<li><a href="II.html">II</a></li>
-					<li><a href="III.html">III</a></li>
-				</ul>
-			</nav>
-		</header>
+<template>
+  <div class="prologo">
+      <div class="contenedor">
 		<div class="contenido">
 			<h2 class="contenido__h2">Prólogo</h2>
 			<p class="contenido__p">Los saltadores de humo (smokejumpers en inglés) son un tipo de
@@ -44,5 +26,11 @@
 			<h3>Smokejumpers</h3>
 		</footer>
 	</div>
-</body>
-</html>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'Prologo'
+}
+</script>

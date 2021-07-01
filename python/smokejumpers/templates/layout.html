@@ -4,24 +4,24 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link rel="stylesheet" type="text/css" href="estilo-index.css">
-	<title>III</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='estilo-index.css')}}">
+	<title>Smokejumpers</title>
 </head>
 <body>
 	<div class="contenedor">
 		<header class="header">
 			<nav class="header__nav">
 				<ul>
-					<li><a href="index.html">Prólogo</a></li>
-					<li><a href="I.html">I</a></li>
-					<li><a href="II.html">II</a></li>
-					<li><a href="III.html">III</a></li>
+					<li><a href="{{url_for('index')}}">Prólogo</a></li>
+					<li><a href="{{url_for('I')}}">I</a></li>
+					<li><a href="{{url_for('II')}}">II</a></li>
 				</ul>
 			</nav>
 		</header>
-		<div class="contenido">
-			<h2>III<h2>
-		</div>
+
+		{% block contenido %}
+		{% endblock %}
+		
 		<footer class="footer">
 			<h3>Smokejumpers</h3>
 		</footer>
