@@ -1,5 +1,5 @@
 <template>
-  <div class="prologo">
+  <div class="prologo body">
       <div class="contenedor">
 		<div class="contenido">
 			<h2 class="contenido__h2">Prólogo</h2>
@@ -34,3 +34,47 @@ export default {
   name: 'Prologo'
 }
 </script>
+
+<style scoped>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+
+	.body{
+		background: #000;
+		color: #fff;
+		font-family: sans-serif;
+		font-size: 20px;
+	}
+
+	.contenedor{
+		width: 90%;
+		max-width: 1000px;
+		margin: 20px auto;
+		display: grid;
+		grid-gap: 20px;
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(2, auto);
+
+		grid-template-areas:	"contenido"
+								"footer";
+	}
+
+	.contenedor .contenido{
+		grid-area: contenido;
+		text-align: justify;
+	}
+
+	.contenedor .footer{
+		grid-area: footer;
+	}
+
+	@media screen and (max-width: 768px){
+		.contenedor{
+			grid-template-areas:"contenido"
+								"contenido"
+								"footer";
+		}
+	}
+</style>

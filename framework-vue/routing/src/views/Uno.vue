@@ -1,7 +1,7 @@
 <template>
-    <div class="uno body">
-        <div class="contenedor">
-		    <div class="contenido">
+	<div class="uno body">
+		<div class="contenedor">
+			<div class="contenido">
 			    <h2>I</h2>
 			    <p>Sahara condujo a Sam por los pasillos de la base, hasta la habitación
 			    en donde el resto del equipo ya estaba preparándose para subir al
@@ -9,9 +9,11 @@
 			    <br>
 			    - Tundra, tenemos a la doceava miembro del equipo -
 			    <br>
-			    - Excelente - Contesto Tundra <br>- Preparare su mochila, aquella es el
+			    - Excelente - Contesto Tundra 
+				<br>- Preparare su mochila, aquella es el
 			    área de las chicas, para que te pongas el uniforme, hay ropa de todas
-			    las tallas - señalo Tundra.<br> Un par de minutos después, Sam estaba
+			    las tallas - señalo Tundra.
+				<br> Un par de minutos después, Sam estaba
 			    lista, llevaba puesto un pantalón azul y una camisa amarilla
 			    fosforescente, ambas prendas resistentes al fuego, encima tenia puesto
 			    otro pantalón y camisa color arena con kevlar acolchado, la camisa
@@ -31,8 +33,8 @@
 		    <footer class="footer">
 			    <h3>Smokejumpers</h3>
 		    </footer>
-	    </div>
-    <div>
+		</div>
+	</div>
 </template>
 
 <script>
