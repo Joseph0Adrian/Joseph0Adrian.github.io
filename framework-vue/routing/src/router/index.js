@@ -1,13 +1,19 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Prologo from '../views/Prologo.vue'
+// import Prologo from '../views/Prologo.vue'
+import Home from '../views/Home.vue'
 import Uno from '../views/Uno.vue'
 import Dos from '../views/Dos.vue'
 
 const routes = [
+  // {
+  //   path: '/prologo',
+  //   name: 'Prologo',
+  //   component: Prologo
+  // }
   {
-    path: '/prologo',
-    name: 'Prologo',
-    component: Prologo
+    path: '/home',
+    name: 'Home',
+    component: Home
   },
   {
     path: '/uno',

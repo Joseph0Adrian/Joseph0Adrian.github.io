@@ -1,7 +1,7 @@
 <template>
-	<div class="prologo body">
-    	<div class="contenedor">
-			<div class="contenido">
+  <div class="prologo body">
+    <div class="contenedor">
+		  <div class="contenido">
 				<h2 class="contenido__h2">Prólogo</h2>
 				<p class="contenido__p">Los saltadores de humo (smokejumpers en inglés) son un tipo de
 				bombero forestal que saltan desde aviones y descienden por medio de
@@ -22,21 +22,22 @@
 				previa en extinción de incendios, como helitack crews, hotshot crews
 				o fuels crews.</p>
 			</div>
-		<footer class="footer">
-			<h3>Smokejumpers</h3>
-		</footer>
+		  <footer class="footer">
+			  <h3>Smokejumpers</h3>
+		  </footer>
 		</div>
-  	</div>
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'Prologo'
+  name: 'HelloWorld'
 }
 </script>
 
+<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-	*{
+  *{
 		margin: 0;
 		padding: 0;
 	}

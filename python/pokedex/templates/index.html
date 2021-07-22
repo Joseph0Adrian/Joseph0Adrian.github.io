@@ -1,0 +1,32 @@
+{% extends "layout.html"%}
+
+{% block contenedor %}
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Image ID</th>
+            <th scope="col">Country Code</th>
+            <th scope="col">Sub</th>
+            <th scope="col">Value</th>
+            <th scope="col">Created At</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for vote in votes %}
+        <tr>
+            <th scope="row">{{ vote['id'] }}</th>
+            <th scope="row">{{ vote['image_id'] }}</th>
+            <td>{{ vote['country_code'] }}</td>
+            <td>{{ vote['sub_id'] }}</td>
+            <td>{{ vote['value'] }}</td>
+            <td>{{ vote['created_at'] }}</td>
+            <td> <a href="/view/{{ vote['created_at'] }}">View</a> </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
