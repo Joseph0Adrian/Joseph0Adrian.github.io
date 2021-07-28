@@ -3,13 +3,12 @@
         <div class="pokemon-info">
             <img
                 class="pokemon-img"
-                v-bind:src="pokemon.sprites.front_default"
+                v-bind:src="imageurl + pokemon.id + '.png'"
                 v-bind:alt="pokemon.name" />
             <h2 class="pokemon-name">{{pokemon.name}}</h2>
             <ul>
                 <li><b>Height: {{pokemon.height}}</b></li>
                 <li><b>Weight: {{pokemon.weight}}</b></li>
-                <!-- <li>Characteristic: {{characteristicPokemon.description}}</li> -->
             </ul>
             <ul class="pokemon-stats">
                 <Stat
@@ -35,7 +34,12 @@ import Type from './Type.vue'
 export default {
     name: 'PokedexPantalla',
     components: {
-        Stat, Type
+        Stat, Type,
+    },
+    data(){
+        return{
+            imageurl:"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/"
+        }
     },
     props: {
     // PropTypes on Vue
@@ -43,10 +47,6 @@ export default {
             type: Object,
             default: () => {}
         },
-/*         characteristicPokemon: {
-            type: Object, 
-            default: () => {}
-        } */
-    }
+    },
 }
 </script>

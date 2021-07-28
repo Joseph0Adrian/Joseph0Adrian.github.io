@@ -1,0 +1,14 @@
+{% extends "layout.html"%}
+
+{% block contenedor %}
+
+<form method="POST" action="/save" c>
+    <div class="mb-3 form-group">
+        <label for="value_input" class="form-label">Insert value: 0 o 1 </label>
+        <input type="number" class="form-control" id="value_input" name="value_input">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+{% endblock %}

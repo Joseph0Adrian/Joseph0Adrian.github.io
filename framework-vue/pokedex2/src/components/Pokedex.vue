@@ -26,13 +26,11 @@ export default {
     data () {
         return {
             pokemon: null,
-            // characteristicPokemon: null,
             pokemonId: Math.floor(Math.random() * 806 + 1).toString()
         }
     },
     created () {
         this.getPokemon()
-        // this.getCharacteristicPokemon()
     },
     methods:{
         getPokemon () {
@@ -50,21 +48,10 @@ export default {
             if (pokemonId !== '') {
                 this.pokemonId = pokemonId
                 this.getPokemon()
-                // this.getCharacteristicPokemon()
                 return
             }
         },
-/*         getCharacteristicPokemon (){
-            fetch(`https://pokeapi.co/api/v2/characteristic/${this.pokemonId}`)
-            .then(res => res.json())
-            .then(data => {
-                characteristicPokemon = data
-            })
-            .catch(err => {
-                console:log(err)
-            })
-        } */
-  }
+    },
 }
 </script>
 

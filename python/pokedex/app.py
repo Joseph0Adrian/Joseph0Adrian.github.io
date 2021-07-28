@@ -2,6 +2,7 @@ import requests
 from flask import Flask, request, render_template, redirect, url_for, flash, session
 from api.requests_api import RequestsApi
 from models.Vote import Vote
+import random
 
 # aun se siguen agregando mas funcionalidades
 # practica para consumo de api con flask
@@ -17,13 +18,22 @@ def index():
 
 @app.route('/new')
 def new():
-    return "Formulario para nuevo registro"
+    return render_template('create.html')
 
-@app.route('/save')
+@app.route('/save', methods=['POST'])
 def save():
-    vote = Vote(value=1)
-    res = RequestsApi.save_api(vote)
-    return "Saved"
+    if request.method == 'POST':
+        try:
+            imglist = ['1d0', 'cvr', 'ar9', 'djk', '1nk', '9bf']
+            img = random.choice(imglist)
+
+            value_input = request.form['value_input']
+
+            vote = Vote(value=int(value_input), image_id=img)
+            res = RequestsApi.save_api(vote)
+            return redirect(url_for('index'))
+        except:
+            return "not saved"
 
 @app.route('/view/<id>')
 def view(id):
