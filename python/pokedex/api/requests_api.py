@@ -39,7 +39,7 @@ class RequestsApi:
         try:
             response = requests.request("GET", RequestsApi.url + "/" +str(id), headers=RequestsApi.headers)
             if response.status_code != 200:
-                return False
+                return None
             else:
                 return response.json()                
         except:
@@ -50,7 +50,7 @@ class RequestsApi:
         try:
             response = requests.request("DELETE", RequestsApi.url + "/" + str(id), headers=RequestsApi.headers)
             if response.status_code != 200:
-                return False
+                return None
             else:
                 return response.json()
         except:

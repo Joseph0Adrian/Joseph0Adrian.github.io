@@ -1,12 +1,12 @@
 <template>
-    <li class="pokemon-stat">
-        {{item.stat.name}} : {{item.base_stat}}
+    <li class="pokemon-ability">
+        {{item.ability.name}}
     </li>
 </template>
 
 <script>
 export default {
-    name: 'Stat',
+    name: 'Abilities',
     props: {
     // PropTypes on Vue
         item: {

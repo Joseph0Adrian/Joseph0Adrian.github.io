@@ -1,11 +1,6 @@
 <template>
     <li class="pokemon-type">
-        <span class="type-name">
-            <b><span>{{item.slot}}</span>
-            </b>
-        </span>
-        <br>
-        <span>{{item.type.name}}</span>
+        {{item.type.name}}
     </li>
 </template>
 

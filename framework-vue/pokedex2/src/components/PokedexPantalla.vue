@@ -7,21 +7,26 @@
                 v-bind:alt="pokemon.name" />
             <h2 class="pokemon-name">{{pokemon.name}}</h2>
             <ul>
-                <li><b>Height: {{pokemon.height}}</b></li>
-                <li><b>Weight: {{pokemon.weight}}</b></li>
-            </ul>
-            <ul class="pokemon-stats">
+                <li>height: {{pokemon.height}}</li>
+                <li>weight: {{pokemon.weight}}</li>
                 <Stat
-                    v-bind:item="item"
-                    v-for="item in pokemon.stats"
+                    v-bind:item= "item"
+                    v-for= "item in pokemon.stats"
                     v-bind:key= "item.stat.name"
                 />
-            </ul>
-            <ul class="pokemon-type">
+                <br>
+                type
                 <Type
-                    v-bind:item="item"
-                    v-for="item in pokemon.types"
+                    v-bind:item= "item"
+                    v-for= "item in pokemon.types"
                     v-bind:key= "item.slot"
+                />
+                <br>
+                abilities
+                <Abilities
+                    v-bind:item= "item"
+                    v-for= "item in pokemon.abilities"
+                    v-bind:key= "item.ability"
                 />
             </ul>
         </div>
@@ -31,10 +36,11 @@
 <script>
 import Stat from './Stat.vue'
 import Type from './Type.vue'
+import Abilities from './Abilities'
 export default {
     name: 'PokedexPantalla',
     components: {
-        Stat, Type,
+        Stat, Type, Abilities
     },
     data(){
         return{

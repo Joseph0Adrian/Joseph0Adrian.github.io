@@ -13,7 +13,7 @@ app.secret_key = "b7181fc7-8952-4af7-b7ca-f22514425330"
 @app.route('/')
 def index():
     res = RequestsApi.get_all_api()
-    print(res)
+    # print(res)
     return render_template('index.html', votes = res)
 
 @app.route('/new')
@@ -39,7 +39,7 @@ def save():
 def view(id):
     res= RequestsApi.get_one_api(id)
     print(res)
-    return "View"
+    return render_template('view.html', vote=res)
 
 @app.route('/delete/<id>')
 def delete(id):
