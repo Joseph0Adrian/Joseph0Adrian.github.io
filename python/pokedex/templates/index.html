@@ -23,7 +23,7 @@
             <td>{{ vote['sub_id'] }}</td>
             <td>{{ vote['value'] }}</td>
             <td>{{ vote['created_at'] }}</td>
-            <td> <a href="/view/{{ vote['created_at'] }}">View</a> </td>
+            <td> <a href="/view/{{ vote['id'] }}" class="btn btn-info">View</a> <a href="/delete/{{ vote['id'] }}" class="btn btn-danger">Delete</a></td>
         </tr>
         {% endfor %}
     </tbody>

@@ -10,10 +10,16 @@ import random
 app=Flask(__name__)
 app.secret_key = "b7181fc7-8952-4af7-b7ca-f22514425330"
 
+# sesión muy sencillo de ejemplo
+def session_validate():
+    if 'login' in session:
+        return True
+    else:
+        return False
+
 @app.route('/')
 def index():
     res = RequestsApi.get_all_api()
-    # print(res)
     return render_template('index.html', votes = res)
 
 @app.route('/new')
@@ -38,14 +44,12 @@ def save():
 @app.route('/view/<id>')
 def view(id):
     res= RequestsApi.get_one_api(id)
-    print(res)
     return render_template('view.html', vote=res)
 
 @app.route('/delete/<id>')
 def delete(id):
     res= RequestsApi.delete_api(id)
-    print(res)
-    return "Deleted"
+    return redirect(url_for('index'))
 
 if __name__== '__main__':
     app.run(debug=True)
