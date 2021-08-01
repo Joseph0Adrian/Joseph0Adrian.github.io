@@ -10,13 +10,6 @@ import random
 app=Flask(__name__)
 app.secret_key = "b7181fc7-8952-4af7-b7ca-f22514425330"
 
-# sesión muy sencillo de ejemplo
-def session_validate():
-    if 'login' in session:
-        return True
-    else:
-        return False
-
 @app.route('/')
 def index():
     res = RequestsApi.get_all_api()
