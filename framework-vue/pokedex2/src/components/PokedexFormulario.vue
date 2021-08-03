@@ -14,6 +14,7 @@
             v-on:click="search"
         />
     </form>
+    <br>
 </template>
 
 <script>
