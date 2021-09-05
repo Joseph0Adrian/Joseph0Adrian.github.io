@@ -11,14 +11,12 @@ npm install -g @vue/cli
 npm run serve
 ```
 
-### Compilación para desplegar para desplegar
+### Compilación para desplegar
 ```
 npm run build
 ```
-### Despues de la compilación se genera la carpete dist,
-### ingresa a ella, abre index.html con un editor de código,
-### a las rutas dentro de los href y src, borra el primer /,
-### abre index.html para visualizar la aplicación.
+### Despues de la compilación se genera la carpeta dist, ingresa a ella, abre index.html con un editor de código,
+### a las rutas dentro de los href y src, borra el primer /, abre index.html para visualizar la aplicación.
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
