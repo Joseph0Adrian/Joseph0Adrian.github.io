@@ -9,8 +9,8 @@
         </div>
         <div class="pokemon-informacion-general tarjeta">
             <h3>Name : {{pokemon.name}}</h3>
-            <p>height : {{ formato(pokemon.height) }} m</p>
-            <p>weight : {{ formato(pokemon.weight) }} kg</p>
+            <p>height : {{ formato(pokemon.height) }} m.</p>
+            <p>weight : {{ formato(pokemon.weight) }} kg.</p>
         </div>
         <div class="pokemon-estadisticas tarjeta">
             <h3>Stats</h3>
@@ -88,7 +88,7 @@ export default {
 
 .contenedor .pokemon-imagen-contenedor {
     grid-area: pokemon-imagen-contenedor;
-    background: #9c9c9c;
+    background: #e1e1da;
 }
 
 .contenedor .pokemon-informacion-general {
@@ -112,13 +112,13 @@ export default {
 }
 
 .tarjeta {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.7);
     transition: 0.3s;
     border-radius: 5px;
 }
 
 .tarjeta:hover{
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.7);
 }
 
 @media screen and (max-width: 768px) {

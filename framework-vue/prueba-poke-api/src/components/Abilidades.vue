@@ -1,6 +1,6 @@
 <template>
     <p>
-        ability : {{item.ability.name}}
+        ability : {{item.ability.name}}.
     </p>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
     <p class="pokemon-estadistica">
-        {{item.stat.name}} : {{item.base_stat}}
+        {{item.stat.name}} : {{item.base_stat}}.
     </p>
 </template>
 

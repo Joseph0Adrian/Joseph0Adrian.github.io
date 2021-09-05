@@ -1,6 +1,6 @@
 <template>
     <p>
-        type : {{item.type.name}}
+        type : {{item.type.name}}.
     </p>
 </template>
 
