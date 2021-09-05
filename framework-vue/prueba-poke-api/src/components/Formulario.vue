@@ -1,5 +1,5 @@
 <template>
-    <form class="pokemon-formulario" on:submit={handleSubmit}>
+    <form class="pokemon-formulario" on:submit={manejadorEnvio}>
         <input
             class="pokemon-input"
             type="text"
@@ -15,7 +15,7 @@
             size="30"
             class="pokemon-boton"
             value="Search"
-            v-on:click="search"
+            v-on:click="buscar"
         />
     </form>
     <br>
@@ -30,7 +30,7 @@ export default {
         }
     },
     methods: {
-        search (e) {
+        buscar (e) {
             e.preventDefault()
             const nombrePokemon = this.nombrePokemon
             const pokemonIdNombre = window.isNaN(parseInt(nombrePokemon)) ? 

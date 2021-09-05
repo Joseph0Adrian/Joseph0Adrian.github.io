@@ -1,24 +1,24 @@
 # prueba-poke-api
 
-## Project setup
+### Vue CLI requiere Node.js
+### Instalación de Vue cli
 ```
-npm install
+npm install -g @vue/cli
 ```
 
-### Compiles and hot-reloads for development
+### Compilación y recarga en caliente para el desarrollo
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### Compilación para desplegar para desplegar
 ```
 npm run build
 ```
-
-### Lints and fixes files
-```
-npm run lint
-```
+### Despues de la compilación se genera la carpete dist,
+### ingresa a ella, abre index.html con un editor de código,
+### a las rutas dentro de los href y src, borra el primer /,
+### abre index.html para visualizar la aplicación.
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).

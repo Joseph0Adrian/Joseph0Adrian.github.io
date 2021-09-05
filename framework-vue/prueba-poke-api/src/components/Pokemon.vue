@@ -1,7 +1,7 @@
 <template>
   <div class="pokemon">
     <formulario
-      v-on:submit="handleSubmit($event)"
+      v-on:submit="manejadorEnvio($event)"
     />
     <datos
       v-bind:pokemon="pokemon"
@@ -39,7 +39,7 @@ export default {
         alert.log(err)
       })
     },
-    handleSubmit (pokemonIdNombre) {
+    manejadorEnvio (pokemonIdNombre) {
       if (pokemonIdNombre !== '') {
         this.pokemonIdNombre = pokemonIdNombre
         this.getPokemon()
