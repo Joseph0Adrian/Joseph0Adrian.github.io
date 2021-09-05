@@ -29,7 +29,8 @@ export default{
         search (e) {
             e.preventDefault()
             const pokemonName = this.pokemonName
-            const pokemonId = window.isNaN(parseInt(pokemonName)) ? pokemonName.toLowerCase() : pokemonName
+            const pokemonId = window.isNaN(parseInt(pokemonName)) ? 
+            pokemonName.toLowerCase() : pokemonName
             this.$emit('submit', pokemonId)
         }
     }

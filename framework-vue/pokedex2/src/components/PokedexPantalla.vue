@@ -8,7 +8,7 @@
                 v-bind:alt="pokemon.name" />
                 <div class="card-body">
                     <h5 class=" pokemon-name card-title">{{pokemon.name}}</h5>
-                    <ul class="card-text">
+                    <ul class="card-text text-center">
                         Stat
                         <li>height: {{pokemon.height}}</li>
                         <li>weight: {{pokemon.weight}}</li>
