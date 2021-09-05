@@ -5,15 +5,16 @@
             type="text"
             name="pokemon"
             v-model="nombrePokemon"
-            placeholder="Ingresa número o nombre de primera generación)"
+            placeholder="Enter number or name"
             autocomplete="off"
         />
         <br>
         <br>
         <input
             type="submit"
+            size="30"
             class="pokemon-boton"
-            value=""
+            value="Search"
             v-on:click="search"
         />
     </form>
@@ -35,7 +36,7 @@ export default {
             const pokemonIdNombre = window.isNaN(parseInt(nombrePokemon)) ? 
             nombrePokemon.toLowerCase() : nombrePokemon
             this.$emit('submit', pokemonIdNombre)
-        }
+        },
     }
 }
 </script>

@@ -36,7 +36,7 @@ export default {
         this.pokemon = data
       })
       .catch(err => {
-        console.log(err)
+        alert.log(err)
       })
     },
     handleSubmit (pokemonIdNombre) {
