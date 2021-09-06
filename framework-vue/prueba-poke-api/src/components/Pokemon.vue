@@ -26,9 +26,11 @@ export default {
     }
   },
   created () {
+    // al iniciar muestra un pokemon aleatorio
     this.getPokemon()
   },
   methods: {
+    // obtiene información del pokemon
     getPokemon () {
       fetch(`https://pokeapi.co/api/v2/pokemon/${this.pokemonIdNombre}`)
       .then(res => res.json())

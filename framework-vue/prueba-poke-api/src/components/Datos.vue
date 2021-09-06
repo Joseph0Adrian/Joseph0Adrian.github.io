@@ -63,6 +63,7 @@ export default {
         },
     },
     methods: {
+        // muestra altura y peso con 2 decimales
         formato (valor) {
             var temporal = valor*0.1
             return temporal.toFixed(2).toString()
