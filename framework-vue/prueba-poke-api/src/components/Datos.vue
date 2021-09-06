@@ -87,6 +87,10 @@ export default {
 		"pokemon-informacion-general    pokemon-abilidades";
 }
 
+p {
+    font-size: 18px;
+}
+
 .contenedor .pokemon-imagen-contenedor {
     grid-area: pokemon-imagen-contenedor;
     background: #e1e1da;
