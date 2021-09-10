@@ -1,14 +1,13 @@
 <template>
-    <li class="pokemon-stat">
+    <p>
         {{item.stat.name}} : {{item.base_stat}}
-    </li>
+    </p>
 </template>
 
 <script>
 export default {
     name: 'Stat',
     props: {
-    // PropTypes on Vue
         item: {
             type: Object,
             default: () => {}

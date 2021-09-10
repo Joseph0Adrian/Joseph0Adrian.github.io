@@ -1,39 +1,40 @@
 <template>
-    <div class="pokedex-pantalla container">
-        <div class="pokemon-info row">
-            <div class="card col" style="width: 18rem;">
-                <img
-                class="pokemon-img card-img-top"
+    <div class="contenedor">
+        <div class="pokemon-imagen-contenedor tarjeta">
+            <img
+                class="pokemon-imagen"
                 v-bind:src="imageurl + pokemon.id + '.png'"
-                v-bind:alt="pokemon.name" />
-                <div class="card-body">
-                    <h5 class=" pokemon-name card-title">{{pokemon.name}}</h5>
-                    <ul class="card-text text-center">
-                        Stat
-                        <li>height: {{pokemon.height}}</li>
-                        <li>weight: {{pokemon.weight}}</li>
-                        <Stat
-                            v-bind:item= "item"
-                            v-for= "item in pokemon.stats"
-                            v-bind:key= "item.stat.name"
-                        />
-                        <br>
-                        Type
-                        <Type
-                            v-bind:item= "item"
-                            v-for= "item in pokemon.types"
-                            v-bind:key= "item.slot"
-                        />
-                        <br>
-                        Abilities
-                        <Abilities
-                            v-bind:item= "item"
-                            v-for= "item in pokemon.abilities"
-                            v-bind:key= "item.ability"
-                        />
-                    </ul>
-                </div>
-            </div>
+                v-bind:alt="pokemon.name"
+            />
+        </div>
+        <div class="pokemon-informacion-general tarjeta">
+            <h3>Name : {{pokemon.name}}</h3>
+            <p>height : {{ formato(pokemon.height) }} m.</p>
+            <p>weight : {{ formato(pokemon.weight) }} kg.</p>
+        </div>
+        <div class="pokemon-estadisticas tarjeta">
+            <h3>Stats</h3>
+            <Stat
+                v-bind:item="item"
+                v-for= "item in pokemon.stats"
+                v-bind:key= "item.stat.name"
+            />
+        </div>
+        <div class="pokemon-tipos tarjeta">
+            <h3>Type</h3>
+                <Type
+                    v-bind:item="item"
+                    v-for= "item in pokemon.types"
+                    v-bind:key= "item.slot"
+                />
+        </div>
+        <div class="pokemon-abilidades tarjeta">
+            <h3>Abilities</h3>
+                <Abilities
+                    v-bind:item="item"
+                    v-for= "item in pokemon.abilities"
+                    v-bind:key= "item.ability"
+                />
         </div>
     </div>
 </template>
@@ -59,15 +60,83 @@
                 default: () => {}
             },
         },
+        methods: {
+            // muestra altura y peso con 2 decimales
+            formato (valor) {
+                var temporal = valor*0.1
+                return temporal.toFixed(2).toString()
+            }
+        }
     }
 </script>
 
 <style scoped>
-    .card-body{
-        text-align: left
+.contenedor {
+    width: 90%;
+	max-width: 1000px;
+	margin: 20px auto;
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: repeat(4, auto);
+	grid-template-areas:
+        "pokemon-imagen-contenedor      pokemon-informacion-general"
+		"pokemon-imagen-contenedor      pokemon-estadisticas"
+		"pokemon-imagen-contenedor      pokemon-tipos"
+		"pokemon-abilidades    pokemon-abilidades";
+}
+
+p {
+    font-size: 18px;
+}
+
+.contenedor .pokemon-imagen-contenedor {
+    grid-area: pokemon-imagen-contenedor;
+    background: #e1e1da;
+}
+
+.contenedor .pokemon-informacion-general {
+    grid-area: pokemon-informacion-general;
+    background: #5d9b9b;
+}
+
+.contenedor .pokemon-estadisticas {
+    grid-area: pokemon-estadisticas;
+    background: #db5856;
+}
+
+.contenedor .pokemon-tipos {
+    grid-area: pokemon-tipos;
+    background: #77dd77;
+}
+
+.contenedor .pokemon-abilidades {
+    grid-area: pokemon-abilidades;
+    background: #efa94a;
+}
+
+.tarjeta {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.7);
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.tarjeta:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.7);
+}
+
+@media screen and (max-width: 768px) {
+    .contenedor .pokemon-imagen-contenedor img{
+        width: 70%;
     }
 
-    .pokemon-name{
-        text-align: center
+    .contenedor {
+        grid-template-areas:
+        "pokemon-imagen-contenedor      pokemon-imagen-contenedor"
+        "pokemon-informacion-general    pokemon-informacion-general"
+        "pokemon-estadisticas           pokemon-estadisticas"
+        "pokemon-tipos                  pokemon-tipos"
+        "pokemon-abilidades             pokemon-abilidades";
     }
+}
 </style>

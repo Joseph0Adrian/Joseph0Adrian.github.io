@@ -1,14 +1,13 @@
 <template>
-    <li class="pokemon-type">
+    <p>
         {{item.type.name}}
-    </li>
+    </p>
 </template>
 
 <script>
 export default {
     name: 'Type',
     props: {
-    // PropTypes on Vue
         item: {
             type: Object,
             default: () => {}

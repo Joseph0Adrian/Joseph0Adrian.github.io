@@ -5,12 +5,15 @@
             type="text"
             name="pokemon"
             v-model="pokemonName"
-            placeholder="Busca tu pokemon"
-            autocomplete="off"/>
+            placeholder="Enter number or name"
+            autocomplete="off"
+        />
+        <br>
+        <br>
         <input
             type="submit"
             class="pokemon-boton"
-            value=""
+            value="Search"
             v-on:click="search"
         />
     </form>
