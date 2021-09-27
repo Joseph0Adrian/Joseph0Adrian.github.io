@@ -1,0 +1,13 @@
+{% extends "layout.html"%}
+
+{% block contenedor %}
+
+<form method="POST" action="/search" c>
+    <div class="mb-3">
+        <label for="value_input" class="form-label">Place</label>
+        <input type="text" class="form-control" id="value_input" name="value_input">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+{% endblock %}
