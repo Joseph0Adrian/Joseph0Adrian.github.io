@@ -54,7 +54,6 @@
             }
         },
         props: {
-        // PropTypes on Vue
             pokemon: {
                 type: Object,
                 default: () => {}
