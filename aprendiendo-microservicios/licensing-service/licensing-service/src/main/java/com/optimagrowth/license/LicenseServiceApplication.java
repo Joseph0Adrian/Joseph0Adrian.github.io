@@ -1,6 +1,7 @@
 package com.optimagrowth.license;
 
 import java.util.Locale;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -21,7 +22,6 @@ public class LicenseServiceApplication {
 		localeResolver.setDefaultLocale(Locale.US);
 		return localeResolver;
 	}
-
 	@Bean
 	public ResourceBundleMessageSource messageSource() {
 		ResourceBundleMessageSource messageSource = new ResourceBundleMessageSource();
