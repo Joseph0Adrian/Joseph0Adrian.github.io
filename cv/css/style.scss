@@ -26,6 +26,18 @@ body{
         margin: 0 auto;
         width: max-content;
 
+        @media screen and (max-width: 1285px) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media screen and (max-width: 900px) {
+            grid-template-columns: 1fr;
+        }
+
+        @media screen and (max-width: 500px) {
+            padding: 4rem 2rem;
+        }
+
         a{
             color:inherit;
         }
@@ -35,6 +47,12 @@ body{
                 font-size: 3em;
                 margin-bottom: 1.2rem;
                 margin-left: 1rem;
+                
+                @media screen and (max-width: 900px) {
+                    margin-left: 0;
+                    text-align: center;
+                }
+                
             }
         }
 
@@ -58,6 +76,10 @@ body{
             overflow: hidden;
             border: 10px solid #ccc;
             text-decoration: none;
+
+            @media screen and (max-width: 500px) {
+                max-width: calc(100vw - 4rem);
+            }
 
             &:hover{
                 transform: rotate(0);
