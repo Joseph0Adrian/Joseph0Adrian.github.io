@@ -48,7 +48,7 @@ body .contenedorTarjetas {
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 900px) and (max-width: 500px) {
   body .contenedorTarjetas {
     padding: 4rem 2rem;
   }
@@ -162,7 +162,7 @@ body .contenedorTarjetas .tarjeta:hover::after {
           transform: scale(1);
 }
 
-body .contenedorTarjetas .tarjeta h3 {
+body .contenedorTarjetas .tarjeta h1 {
   margin: 0;
   font-size: 1.5em;
   line-height: 1.2em;

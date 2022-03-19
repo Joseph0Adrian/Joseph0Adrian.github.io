@@ -32,12 +32,12 @@ body{
 
         @media screen and (max-width: 900px) {
             grid-template-columns: 1fr;
-        }
-
+            
         @media screen and (max-width: 500px) {
             padding: 4rem 2rem;
         }
 
+        }
         a{
             color:inherit;
         }
@@ -126,10 +126,11 @@ body{
                 transform: scale(1);
             }
 
-            h3{
+            h1{
                 margin: 0;
                 font-size: 1.5em;
                 line-height: 1.2em;
+
             }
 
             p{
