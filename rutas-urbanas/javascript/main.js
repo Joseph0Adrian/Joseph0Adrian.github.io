@@ -1,3 +1,7 @@
+/*
+    Esto es un prototipo
+*/
+
 var coordenadasRutaLaEstacion = [
     [18.89356, -96.92974],
     [18.89293, -96.93036],
@@ -168,7 +172,7 @@ var coordenadasRutaLaEstacion = [
     [18.89293, -96.93036],
 ];
 
-var latlngs = [
+var coordenadasRutaBuenaVista = [
     [18.893920, -96.929300],
     [18.893610, -96.929690],
     [18.892930, -96.930360],
@@ -353,42 +357,61 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 // show the scale bar on the lower left corner
 L.control.scale({ imperial: true, metric: true }).addTo(map);
 var rutaBuenaVista;
-var rutaLaEstacion
+var rutaLaEstacion;
+
+var marcadores = new Array();
+var paradasRutaBuenaVista = [
+    {"lat":"18.88756787404418", "lon":"-96.926639657467604"},
+    {"lat":"18.890274055302143", "lon":"-96.928918277844787"},
+    {"lat":"18.888630867004395", "lon":"-96.927008628845215"},
+    {"lat":"18.891276279464364", "lon":"-96.93009459413588"},
+    {"lat":"18.892142213881016", "lon":"-96.92926587536931"},
+    {"lat":"18.891007471829653", "lon":"-96.927861822769046"},
+    {"lat":"18.885676665231586", "lon":"-96.921964148059487"},
+    {"lat":"18.88370624743402", "lon":"-96.92104808986187"},
+    {"lat":"18.894344139844179", "lon":"-96.929835928604007"},
+    {"lat":"18.869962692260742", "lon":"-96.916923522949219"},
+    {"lat":"18.865370750427246", "lon":"-96.911516189575195"},
+    {"lat":"18.879874711856246", "lon":"-96.920801410451531"},
+    {"lat":"18.873181343078613", "lon":"-96.913790702819824"},
+    {"lat":"18.879510937258601", "lon":"-96.920345602557063"},
+    {"lat":"18.87530330568552", "lon":"-96.916042333468795"},
+    {"lat":"18.882767977192998", "lon":"-96.922872914001346"},
+    {"lat":"18.868353366851807", "lon":"-96.912846565246582"},
+    {"lat":"18.866872787475586", "lon":"-96.914262771606445"},
+    {"lat":"18.871421813964844", "lon":"-96.915464401245117"},
+    {"lat":"18.866829872131348", "lon":"-96.911494731903076"},
+    {"lat":"18.865370750427246", "lon":"-96.91288948059082"},
+    {"lat":"18.869919776916504", "lon":"-96.914112567901611"},
+    {"lat":"18.868417739868164", "lon":"-96.915550231933594"},
+    {"lat":"18.874855041503906", "lon":"-96.915786266326904"}
+];
+
+function agregandoParadasAutobus() {
+    for (let i = 0; i < paradasRutaBuenaVista.length; i++) {
+        var marcadorParada = new L.marker(
+        [paradasRutaBuenaVista[i].lat, 
+        paradasRutaBuenaVista[i].lon]);
+        marcadores.push(marcadorParada);
+        map.addLayer(marcadores[i]);
+    }
+}
 
 function mostrarRutaBuenaVista() {
-    rutaBuenaVista = L.polyline(latlngs, { color: 'red' }).addTo(map);
+    rutaBuenaVista = L.polyline(coordenadasRutaBuenaVista, { color: 'red' }).addTo(map);
     // zoom the map to the polyline
     map.fitBounds(rutaBuenaVista.getBounds());
-    L.marker([18.88756787404418, -96.926639657467604]).addTo(map);
-    L.marker([18.890274055302143, -96.928918277844787]).addTo(map);
-    L.marker([18.888630867004395, -96.927008628845215]).addTo(map);
-    L.marker([18.891276279464364, -96.93009459413588]).addTo(map);
-    L.marker([18.892142213881016, -96.92926587536931]).addTo(map);
-    L.marker([18.891007471829653, -96.927861822769046]).addTo(map);
-    L.marker([18.885676665231586, -96.921964148059487]).addTo(map);
-    L.marker([18.88370624743402, -96.92104808986187]).addTo(map);
-    L.marker([18.894344139844179, -96.929835928604007]).addTo(map);
-    L.marker([18.869962692260742, -96.916923522949219]).addTo(map);
-    L.marker([18.865370750427246, -96.911516189575195]).addTo(map);
-    L.marker([18.879874711856246, -96.920801410451531]).addTo(map);
-    L.marker([18.873181343078613, -96.913790702819824]).addTo(map);
-    L.marker([18.879510937258601, -96.920345602557063]).addTo(map);
-    L.marker([18.87530330568552, -96.916042333468795]).addTo(map);
-    L.marker([18.882767977192998, -96.922872914001346]).addTo(map);
-    L.marker([18.868353366851807, -96.912846565246582]).addTo(map);
-    L.marker([18.866872787475586, -96.914262771606445]).addTo(map);
-    L.marker([18.871421813964844, -96.915464401245117]).addTo(map);
-    L.marker([18.866829872131348, -96.911494731903076]).addTo(map);
-    L.marker([18.865370750427246, -96.91288948059082]).addTo(map);
-    L.marker([18.869919776916504, -96.914112567901611]).addTo(map);
-    L.marker([18.868417739868164, -96.915550231933594]).addTo(map);
-    L.marker([18.874855041503906, -96.915786266326904]).addTo(map);
+    agregandoParadasAutobus();
     map.removeLayer(rutaLaEstacion);
 }
 
 function mostrarRutaLaEstacion() {
-    rutaLaEstacion = L.polyline(coordenadasRutaLaEstacion, { color: 'green' }).addTo(map);
+    rutaLaEstacion = L.polyline(coordenadasRutaLaEstacion, { color: 'blue' }).addTo(map);
     // zoom the map to the polyline
     map.fitBounds(rutaLaEstacion.getBounds());
     map.removeLayer(rutaBuenaVista);
+    for (let i = 0; i < marcadores.length; i++) {
+        map.removeLayer(marcadores[i]);
+        
+    }
 }
