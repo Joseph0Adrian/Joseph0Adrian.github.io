@@ -9,11 +9,23 @@
     <title>Rutas urbanas córdoba</title>
 </head>
 <body>
-    <div id="map"></div>
-    <div>
-        <button onclick="mostrarRutaBuenaVista()">Ruta Buenavista</button>
-        <button onclick="mostrarRutaLaEstacion()">Ruta El Palomar</button>
+    <div id="myNav" class="overlay">
+        <!-- boton para cerrar overlay navigation -->
+        <a href="javascript:void(0)" class="closeButton" onclick="closeNav()">&times;</a>
+
+        <!-- contenido overlay -->
+        <div class="overlay-content">
+            <ol>
+                <li onclick="mostrarRutaBuenaVista()">Ruta Buenavista</li>
+                <li onclick="mostrarRutaLaEstacion()">Ruta La Estación</li>
+            </ol>
+            <!-- <a><button onclick="mostrarRutaBuenaVista()">Ruta Buenavista</button></a>
+            <a><button onclick="mostrarRutaLaEstacion()">Ruta La Estación</button></a> -->
+        </div>
     </div>
+    <div id="map"></div>
+    <button onclick="openNav()">Rutas</button>
+    <button id="borrarRuta" onclick="borrarRuta()">Regresar</button>
     <script src="leaflet/leaflet.js"></script>
     <script src="javascript/main.js"></script>
 </body>
