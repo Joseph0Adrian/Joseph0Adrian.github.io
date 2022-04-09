@@ -22,7 +22,7 @@ function openNav() {
     document.getElementById("myNav").style.height = "100%";
 }
   
-/* Close when someone clicks on the "x" symbol inside the overlay */  
+/* Se cierra nav */  
 function closeNav() {
     // document.getElementById("myNav").style.width = "0%";
     document.getElementById("myNav").style.height = "0%";
@@ -36,7 +36,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
-// show the scale bar on the lower left corner
+// muestra la barra de escala en la esquina inferior izquierda
 L.control.scale({ imperial: true, metric: true }).addTo(map);
 
 function vaciarArray() {
@@ -51,7 +51,7 @@ function quitarParadasAutobus() {
 
 function agregandoParadasAutobus(arrayConParadas) {
     for (let i = 0; i < arrayConParadas.length; i++) {
-        var marcadorParada = new L.marker(
+        let marcadorParada = new L.marker(
             [arrayConParadas[i].lat,
             arrayConParadas[i].lon]);
         marcadores.push(marcadorParada);
@@ -262,18 +262,22 @@ function mostrarRutaBuenaVista() {
     ];
     mostarBotonBorrarRuta();
     closeNav();
-    rutaBuenaVista = L.polyline(coordenadasRutaBuenaVista, { color: 'red' }).addTo(map);
-    /* rutaBuenaVista = L.polyline(coordenadasRutaBuenaVista, { color: 'red' });
-    grupoCapas = L.layerGroup([rutaBuenaVista, agregandoParadasAutobus(paradasRutaBuenaVista)]);
-    grupoCapas.addTo(map); */
-    // zoom the map to the polyline
+    // rutaBuenaVista = L.polyline(coordenadasRutaBuenaVista, { color: 'red' }).addTo(map);
+    // se traza la ruta de autobus
+    rutaBuenaVista = L.polyline(coordenadasRutaBuenaVista, { color: 'red' });
+    // se agrega polilinia de ruta a layerGroup grupoCapas
+    grupoCapas = L.layerGroup([rutaBuenaVista]);
+    // se muestra en el mapa
+    grupoCapas.addTo(map);
+    // zoom a la ruta
     map.fitBounds(rutaBuenaVista.getBounds());
     quitarParadasAutobus();
     vaciarArray();
     agregandoParadasAutobus(paradasRutaBuenaVista);
+    // map.removeLayer(grupoCapas);
     map.removeLayer(rutaLaEstacion);
-    /* layerGroup.removeLayer(rutaLaEstacion);
-    layerGroup.removeLayer(marcadores[i]); */
+    // grupoCapas.removeLayer(rutaLaEstacion);
+    // layerGroup.removeLayer(marcadores[i]);
 }
 
 function mostrarRutaLaEstacion() {
@@ -472,22 +476,22 @@ function mostrarRutaLaEstacion() {
     ];
     mostarBotonBorrarRuta();
     closeNav();
-    rutaLaEstacion = L.polyline(coordenadasRutaLaEstacion, { color: 'blue' }).addTo(map);
-    /* rutaLaEstacion = L.polyline(coordenadasRutaLaEstacion, { color: 'red' });
-    grupoCapas = L.layerGroup([rutaLaEstacion, agregandoParadasAutobus(paradasRutaLaEstacion)]);
-    grupoCapas.addTo(map); */
-    // zoom the map to the polyline
+    // rutaLaEstacion = L.polyline(coordenadasRutaLaEstacion, { color: 'blue' }).addTo(map);
+    rutaLaEstacion = L.polyline(coordenadasRutaLaEstacion, { color: 'red' });
+    grupoCapas = L.layerGroup([rutaLaEstacion]);
+    grupoCapas.addTo(map);
+    // zoom a la ruta
     map.fitBounds(rutaLaEstacion.getBounds());
     quitarParadasAutobus();
     vaciarArray();
     agregandoParadasAutobus(paradasRutaLaEstacion);
     map.removeLayer(rutaBuenaVista);
-    /* layerGroup.removeLayer(rutaBuenaVista);
-    layerGroup.removeLayer(marcadores[i]); */
+    // layerGroup.removeLayer(marcadores[i]);
 }
 
 function borrarRuta() {
     quitarParadasAutobus();
     vaciarArray();
     ocultarBotonBorrarRuta();
+    map.removeLayer(grupoCapas);
 }
