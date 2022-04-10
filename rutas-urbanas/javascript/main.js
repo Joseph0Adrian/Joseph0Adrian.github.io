@@ -492,6 +492,7 @@ function mostrarRutaLaEstacion() {
 function borrarRuta() {
     quitarParadasAutobus();
     vaciarArray();
-    ocultarBotonBorrarRuta();
     map.removeLayer(grupoCapas);
+    openNav();
+    ocultarBotonBorrarRuta();
 }
