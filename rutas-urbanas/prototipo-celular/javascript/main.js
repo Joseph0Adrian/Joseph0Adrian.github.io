@@ -1,5 +1,9 @@
 // inicializa Leaflet
-var map = L.map('map').setView([18.893920, -96.929300], 13);
+var map = L.map('map', {
+    center: [18.893920, -96.929300],
+    zoom: 14,
+    zoomControl: false
+});
 
 // add the OpenStreetMap tiles
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
