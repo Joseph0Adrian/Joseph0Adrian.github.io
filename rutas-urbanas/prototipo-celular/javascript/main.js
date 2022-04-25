@@ -1,3 +1,15 @@
+/* Abre cuando hacen click en el boton */
+function abrirMenuRutas() {
+    // document.getElementById("myNav").style.width = "100%";
+    document.getElementById("menuRutas").style.height = "100%";
+}
+
+/* Se cierra nav */  
+function cerrarMenuRutas() {
+    // document.getElementById("myNav").style.width = "0%";
+    document.getElementById("menuRutas").style.height = "0%";
+} 
+
 // inicializa Leaflet
 var map = L.map('map', {
     center: [18.893920, -96.929300],
