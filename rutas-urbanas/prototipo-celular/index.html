@@ -10,21 +10,14 @@
     <title>Rutas urbanas córdoba</title>
 </head>
 <body>
-    <!-- <div class="container">
-        <div class="row">
-            <div class="col">
-            </div>
-        </div>
-    </div> -->
     <div id="map"></div>
     <button class="abrirMenuRutas" onclick="abrirMenuRutas()">Rutas</button>
-    <!-- <div class="capaBotones"></div> -->
     <div id="menuRutas" class="capa">
         <!-- boton para cerrar overlay navigation -->
         <a href="javascript:void(0)" class="cerrarMenuRutas" onclick="cerrarMenuRutas()">&times;</a>
         <div class="contenidoCapa">
             <ol>
-                <li>Ruta Buenavista</li>
+                <li onclick="mostrarRutaBuenaVista()">Ruta Buenavista</li>
             </ol>
         </div>
     </div>
