@@ -31,7 +31,7 @@ html, body, #map{
     right: 45px;
 }
 
-li{
+ul{
     color: #fff;
     cursor: pointer;
 }
@@ -74,6 +74,6 @@ li{
 .capa .cerrarMenuRutas {
     position: absolute;
     top: 20px;
-    right: 45px;
+    left: 45px;
     font-size: 60px;
 }
