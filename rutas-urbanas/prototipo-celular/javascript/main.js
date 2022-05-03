@@ -14,9 +14,9 @@ function cerrarMenuRutas() {
     document.getElementById("menuRutas").style.height = "0%";
 }
 
-function closeNav() {
-    document.getElementById("menuRutas").style.height = "0%";
-} 
+function abrirMenuParadasRuta() {
+    document.getElementById("menuParadasRutas").style.width = "100%";
+}
 
 // inicializa Leaflet
 var map = L.map('map', {
@@ -243,7 +243,7 @@ function mostrarRutaBuenaVista() {
         [18.89462, -96.93019],
         [18.89394, -96.92928]
     ];
-    closeNav();
+    cerrarMenuRutas();
     // se traza la ruta de autobus
     rutaBuenaVista = L.polyline(coordenadasRutaBuenaVista, { color: 'red' });
     // se agrega polilinia de ruta a layerGroup grupoCapas
@@ -253,4 +253,5 @@ function mostrarRutaBuenaVista() {
     // zoom a la ruta
     map.fitBounds(rutaBuenaVista.getBounds());
     agregandoParadasAutobus(paradasRutaBuenaVista);
+    abrirMenuParadasRuta();
 }
