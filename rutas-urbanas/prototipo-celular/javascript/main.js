@@ -14,8 +14,13 @@ function cerrarMenuRutas() {
     document.getElementById("menuRutas").style.height = "0%";
 }
 
-function abrirMenuParadasRuta() {
+function abrirMenuParadasRutas() {
     document.getElementById("menuParadasRutas").style.width = "100%";
+}
+
+function cerrarMenuParadasRutas() {
+    document.getElementById("menuParadasRutas").style.width = "0%";
+    abrirMenuRutas();
 }
 
 // inicializa Leaflet
@@ -253,5 +258,5 @@ function mostrarRutaBuenaVista() {
     // zoom a la ruta
     map.fitBounds(rutaBuenaVista.getBounds());
     agregandoParadasAutobus(paradasRutaBuenaVista);
-    abrirMenuParadasRuta();
+    abrirMenuParadasRutas();
 }

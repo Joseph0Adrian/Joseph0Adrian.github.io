@@ -80,16 +80,25 @@ ul{
 
 .contenidoCapaParadasRuta{
     position: relative;
-    top: 25%; /* 25% from the top */
+    top: 50%; /* 25% from the top */
     width: 100%; /* 100% width */
     text-align: center; /* Centered text/links */
     margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
 }
 
+.capaParadasRuta a{
+    padding: 8px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #818181;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+}
+
 .capa a{
     padding: 8px;
     text-decoration: none;
-    font-size: 36px;
+    font-size: 15px;
     color: #818181;
     display: block; /* Display block instead of inline */
     transition: 0.3s; /* Transition effects on hover (color) */
@@ -100,5 +109,12 @@ ul{
     position: absolute;
     top: 20px;
     left: 45px;
+    font-size: 60px;
+}
+
+.capaParadasRuta .cerrarMenuParadasRutas{
+    position: absolute;
+    top: 20px;
+    left: 20px;
     font-size: 60px;
 }
