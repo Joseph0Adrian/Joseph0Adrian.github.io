@@ -89,7 +89,7 @@ ul{
 .capaParadasRuta a{
     padding: 8px;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 20px;
     color: #818181;
     display: block; /* Display block instead of inline */
     transition: 0.3s; /* Transition effects on hover (color) */
@@ -109,12 +109,12 @@ ul{
     position: absolute;
     top: 20px;
     left: 45px;
-    font-size: 60px;
+    font-size: 40px;
 }
 
 .capaParadasRuta .cerrarMenuParadasRutas{
     position: absolute;
     top: 20px;
     left: 20px;
-    font-size: 60px;
+    font-size: 40px;
 }
