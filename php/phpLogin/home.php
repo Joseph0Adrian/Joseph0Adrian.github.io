@@ -6,6 +6,9 @@ if (!isset($_SESSION['loggedin'])) {
 	header('Location: index.html');
 	exit;
 }
+
+include('apiRest.php');
+$fakeProducts = GET();
 ?>
 
 <!DOCTYPE html>
@@ -28,6 +31,18 @@ if (!isset($_SESSION['loggedin'])) {
 		<div class="content">
 			<h2>Home Page</h2>
 			<p>Welcome back, <?=$_SESSION['name']?>!</p>
+		</div>
+		<div class="content">
+			<h2>Fake data test</h2>
+			<div>
+				<?php for($i=0; $i<count($fakeProducts); $i++):?>
+					<h3>Title: <?= $fakeProducts[$i]['name'];?></h3>
+					<h4>Publishing house: <?= $fakeProducts[$i]['username'];?></h4>
+					<h4>Website: <?= $fakeProducts[$i]['website'];?></h4>
+					<button>Agregar +</button>
+					<br>
+				<?php endfor; ?>
+			</div>
 		</div>
 	</body>
 </html>
