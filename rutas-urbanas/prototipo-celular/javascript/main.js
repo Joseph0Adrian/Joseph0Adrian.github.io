@@ -7,7 +7,8 @@ var grupoCapas = new L.layerGroup();
 // inicializa Leaflet
 var map = L.map('map', {
     center: [18.893920, -96.929300],
-    zoom: 14,
+    zoom: 15,
+    maxZoom: 18,
     zoomControl: false
 });
 
