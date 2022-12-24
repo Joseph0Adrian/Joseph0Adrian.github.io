@@ -33,8 +33,8 @@ export default {
       zoom: 13,
       center: [18.893920, -96.929300],
       polyline: {
-        latlngs: [[18.893920, -96.929300]],
-		color: 'green'
+        latlngs: [[18.8939, -96.9293], [18.8936, -96.9297], [18.8929, -96.9304]], 
+        color: 'green'
       },
       // markerLatLng: [51.504, -0.159],
       msgOfOther: [],
