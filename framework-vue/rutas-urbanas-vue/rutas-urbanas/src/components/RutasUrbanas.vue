@@ -30,35 +30,36 @@ export default {
       url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
       attribution:
         '&copy; <a target="_blank" href="http://osm.org/copyright">OpenStreetMap</a> contributors',
-      zoom: 13,
+      zoom: 15,
       center: [18.893920, -96.929300],
       polyline: {
-        latlngs: [[18.8939, -96.9293], [18.8936, -96.9297], [18.8929, -96.9304]], 
+        latlngs: [], 
         color: 'green'
       },
-      // markerLatLng: [51.504, -0.159],
-      msgOfOther: [],
+      markerLatLng: [51.504, -0.159],
+      msgOfOther: null,
     }
   },
   created(){
-
-  },
-  beforeMount() {
-    this.$root.$on('send', data => {
-    console.log(data);
-      if(data!=null){
-        this.polyline.latlngs = data;
-      } else {
-        this.polyline.latlngs = [[18.893920, -96.929300]];
-      }
-      // this.msgOfOther = data;
-      // console.log(this.msgOfOther);
+    this.$root.$on('mostrarRutaUno',(data)=>{
+      this.msgOfOther=data;
+      this.mostrarRutaUno();
     });
   },
   methods:{
-    mostrarRuta(){
-      // console.log();
-      // this.latlngs=this.msgOfOther;
+    mostrarRutaUno(){
+      fetch(`http://localhost/rutasUrbanas/api/read.php`).then(res => res.json()).then(
+        data => {          
+          for (let index = 0; index < data.body.length; index++) {
+            this.polyline.latlngs.push(
+              [
+                parseFloat(data.body[index].coordenadaX), 
+                parseFloat(data.body[index].coordenadaY)
+              ]);
+          }
+      }).catch(err => {
+        console.log(err)
+      })
     },
   },
 }
