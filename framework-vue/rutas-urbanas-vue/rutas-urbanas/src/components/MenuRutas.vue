@@ -2,6 +2,7 @@
   <div class="col-sm-2 vh-100">
       <h3>Menu rutas</h3>
       <button class="btn btn-danger" v-on:click='botonRutaUno()'>Ruta 1</button>
+      <button class="btn btn-danger" >Ruta 2</button>
   </div>
 </template>
 
