@@ -6,11 +6,9 @@ export const userService = {
 };
 
 function login(rfc, password) {
-    alert(rfc);alert(password);
   return axios
     .post("auth/signin", { rfc: rfc, password: password })
     .then((response) => {
-        alert('enviaste al back');
         console.log(response.data);
       if (response.data.token) {
           alert('vas a guardar en localSTORAGE');

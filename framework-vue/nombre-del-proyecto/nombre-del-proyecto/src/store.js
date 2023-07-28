@@ -15,9 +15,13 @@ const store = new Vuex.Store({
         state.isLoggedIn = true;
         state.user = user;
     },
+    logOut(state){
+      state.isLoggedIn = false;
+      state.user       = null;
+    }
   },
   actions: {
-    login({ commit }, { username, password }) {
+    loginStore({ commit }, { username, password }) {
         /* commit('loginRequest', { username }); */
         userService.login(username, password)
             .then(
@@ -30,6 +34,11 @@ const store = new Vuex.Store({
                 }
             );
     },
+    logOut({ commit }){
+      localStorage.removeItem('user');
+      commit('logOut');
+      router.push('login');
+    }
   },
   getters: {
     // Definir tus getters aquí

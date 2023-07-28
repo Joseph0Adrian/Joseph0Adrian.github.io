@@ -3,7 +3,7 @@ import router from '../router'; // Importa el enrutador de tu proyecto Vue.js
 
 const instance = axios.create({
   /* baseURL: 'http://192.168.16.105/validador/', */
-  baseURL: 'http://192.168.96.24:8081/',
+  baseURL: 'http://192.168.96.36:8081/',
   headers: {
     'Content-Type': 'application/json',
   },

@@ -11,19 +11,30 @@ const router = new Router({
       path: "/",
       name: "HelloWorld",
       component: HelloWorld,
-      meta: { requiresAuth: false }
+      meta: { requiresAuth: true }
+    },
+    {
+      path: "/validador",
+      name: "validador",
+      component: () => import("./views/validador"),
+      meta: { requiresAuth: true }
     },
     {
       path: "/login",
       name: "login",
       component: () => import("./views/login"),
-      meta: {
-        beforeResolve(routeTo, routeFrom, next) {
-          if (router.app.$store.state.isLoggedIn) {
-            next({ name: "HelloWorld" });
-          } else {
-            next();
-          }
+      beforeEnter: (to, from, next) => {
+        let x =
+          router.app.$store == undefined
+            ? false
+            : router.app.$store.state.isLoggedIn
+            ? true
+            : false;
+
+        if (x) {
+          next("/validador");
+        } else {
+          next();
         }
       }
     }
@@ -32,8 +43,11 @@ const router = new Router({
 
 // Verifica si el usuario está autenticado antes de cada navegación
 router.beforeEach((to, from, next) => {
-  const loggeduser = localStorage.getItem("user");
-  if (to.meta.requiresAuth && !loggeduser) {
+  const loggeduser = JSON.parse(localStorage.getItem("user"));
+  if (
+    to.meta.requiresAuth &&
+    (!loggeduser || tokenExpirado(loggeduser.token))
+  ) {
     next("/login"); // Redirige a la página de inicio de sesión si no está autenticado
   } else {
     next(); // Permite la navegación

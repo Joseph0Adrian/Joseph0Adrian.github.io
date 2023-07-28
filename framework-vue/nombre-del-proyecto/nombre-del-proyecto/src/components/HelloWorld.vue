@@ -28,8 +28,7 @@
           <form>
             <div class="form-group">
               <label for="exampleInputEmail1">Email address</label>
-              <input :type="tipo" :class="formClass" id="exampleInputEmail1" aria-describedby="emailHelp" 
-              @focus="valida" v-model="inputValue">
+              <input :type="tipo" :class="formClass" id="exampleInputEmail1" aria-describedby="emailHelp" @focus="valida" v-model="inputValue">
             </div>
             <div class="form-group">
               <label for="exampleInputPassword1">Password</label>
@@ -83,7 +82,7 @@ export default {
         { id: 3, name: 'Mike Johnson', email: 'mike@example.com' },
         { id: 4, name: 'Emily Brown', email: 'emily@example.com' },
       ],
-      frutas: ['manzana', 'naranja', 'pera', 'manzana', 'durazno']
+      frutas: ['manzana', 'naranja', 'pera', 'manzana']
     }
   },
   methods : {
